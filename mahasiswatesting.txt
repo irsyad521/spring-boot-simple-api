@@ -1,0 +1,54 @@
+1. Testing GET All Mahasiswa:
+Request:
+
+Method: GET
+URL: http://localhost:8080/api/mahasiswa
+Expected Response:
+
+Harus mendapatkan daftar semua mahasiswa.
+2. Testing GET Mahasiswa by ID:
+Request:
+
+Method: GET
+URL: http://localhost:8080/api/mahasiswa/{id}
+Expected Response:
+
+Harus mendapatkan informasi mahasiswa dengan ID tertentu.
+3. Testing POST Save Mahasiswa:
+Request:
+
+Method: POST
+URL: http://localhost:8080/api/mahasiswa
+Body (raw, JSON):
+json
+Copy code
+{
+    "nama": "Nama Mahasiswa Baru",
+    "email": "emailbaru@example.com",
+    "tgllahir": "2001-02-02"
+}
+Expected Response:
+
+Harus mendapatkan data mahasiswa yang baru disimpan.
+4. Testing PUT Update Mahasiswa:
+Request:
+
+Method: PUT
+URL: http://localhost:8080/api/mahasiswa/{id}
+Body (raw, JSON):
+json
+Copy code
+{
+    "nama": "Nama Mahasiswa Baru",
+    "email": "emailbaru@example.com",
+    "tgllahir": "2001-02-02"
+}
+Expected Response:
+
+Harus mendapatkan data mahasiswa yang telah diperbarui.
+5. Testing DELETE Mahasiswa:
+Request:
+
+Method: DELETE
+URL: http://localhost:8080/api/mahasiswa/{id}
+Expected Response

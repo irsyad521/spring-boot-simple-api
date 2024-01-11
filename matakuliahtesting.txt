@@ -1,0 +1,56 @@
+1. Testing GET All Matakuliah:
+Request:
+
+Method: GET
+URL: http://localhost:8080/api/matakuliah
+Expected Response:
+
+Harus mendapatkan daftar semua matakuliah.
+2. Testing GET Matakuliah by ID:
+Request:
+
+Method: GET
+URL: http://localhost:8080/api/matakuliah/{id}
+Expected Response:
+
+Harus mendapatkan informasi matakuliah dengan ID tertentu.
+3. Testing POST Save Matakuliah:
+Request:
+
+Method: POST
+URL: http://localhost:8080/api/matakuliah
+Body (raw, JSON):
+json
+Copy code
+{
+    "kode": "MK103",
+    "nama": "Matakuliah Baru",
+    "sks": 3
+}
+Expected Response:
+
+Harus mendapatkan data matakuliah yang baru disimpan.
+4. Testing PUT Update Matakuliah:
+Request:
+
+Method: PUT
+URL: http://localhost:8080/api/matakuliah/{id}
+Body (raw, JSON):
+json
+Copy code
+{
+    "kode": "MK103",
+    "nama": "Matakuliah Baru",
+    "sks": 4
+}
+Expected Response:
+
+Harus mendapatkan data matakuliah yang telah diperbarui.
+5. Testing DELETE Matakuliah:
+Request:
+
+Method: DELETE
+URL: http://localhost:8080/api/matakuliah/{id}
+Expected Response:
+
+Tidak ada respons (status 204 No Content). Matakuliah dengan ID tertentu harus dihapus.

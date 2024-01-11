@@ -1,0 +1,64 @@
+1. Testing GET All Nilai:
+Request:
+
+Method: GET
+URL: http://localhost:8080/api/nilai
+Expected Response:
+
+Harus mendapatkan daftar semua nilai.
+2. Testing GET Nilai by ID:
+Request:
+
+Method: GET
+URL: http://localhost:8080/api/nilai/{id}
+Expected Response:
+
+Harus mendapatkan informasi nilai dengan ID tertentu.
+3. Testing POST Save Nilai:
+Request:
+
+Method: POST
+URL: http://localhost:8080/api/nilai
+Body (raw, JSON):
+json
+Copy code
+{
+    "mahasiswa": {
+        "id": 1
+    },
+    "matakuliah": {
+        "id": 1
+    },
+    "nilai": 85.5
+}
+Expected Response:
+
+Harus mendapatkan data nilai yang baru disimpan.
+4. Testing PUT Update Nilai:
+Request:
+
+Method: PUT
+URL: http://localhost:8080/api/nilai/{id}
+Body (raw, JSON):
+json
+Copy code
+{
+    "mahasiswa": {
+        "id": 1
+    },
+    "matakuliah": {
+        "id": 2
+    },
+    "nilai": 90.0
+}
+Expected Response:
+
+Harus mendapatkan data nilai yang telah diperbarui.
+5. Testing DELETE Nilai:
+Request:
+
+Method: DELETE
+URL: http://localhost:8080/api/nilai/{id}
+Expected Response:
+
+Tidak ada respons (status 204 No Content). Nilai dengan ID tertentu harus dihapus.
